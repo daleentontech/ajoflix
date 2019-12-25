@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block head_title %}accounts list{% endblock %}
+
+
+	{% block content %}
+	<br>
+	<h2>Accounts List</h2>
+	<br>
+	<div class="container"> 
+		<table class="table">
+		    <thead>
+		      <tr>
+		        <th>Account Name</th>
+		        <th>Account Number</th>
+		      </tr>
+		    </thead>
+	{% for account in all_ajo_accounts %}       
+		    <tbody>
+		      <tr>
+
+		        <td><a href="{{account.get_absolute_url}}">{{ account.account_name }}</a></td>
+		        <td>{{ account.account_number }}</td>
+		      </tr>
+		    </tbody>
+	{% endfor %}
+		  </table>
+		</div>
+
+    {% endblock %}
