@@ -21,5 +21,5 @@ from .views import home_view
 urlpatterns = [
     path('', home_view),
     path('admin/', admin.site.urls),
-    path('ajo/', include('ajo.urls'))
+    path('accounts', include('accounts.urls'))
 ]
